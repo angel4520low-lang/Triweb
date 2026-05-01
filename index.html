@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TriWeb Solutions</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f7fb;
+}
+
+/* NAVBAR */
+header {
+    background: #0a2540;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to right, #0a2540, #1c3d5a);
+    color: white;
+}
+
+.hero button {
+    padding: 12px 20px;
+    margin-top: 20px;
+    background: #00c896;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* SECTIONS */
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    width: 260px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* IMAGES */
+.gallery img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+/* CATALOGO */
+.catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.producto {
+    background: white;
+    padding: 20px;
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+/* FOOTER */
+footer {
+    background: #0a2540;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* WHATSAPP */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>TriWeb Solutions</h1>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#galeria">Ejemplos</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
+
+<section id="inicio" class="hero">
+    <h1>Crea la página web de tu empresa en minutos</h1>
+    <p>
+        Diseñamos software que permite a empresas mostrar sus productos,
+        servicios y crecer en internet sin complicaciones técnicas.
+    </p>
+    <button onclick="window.location='#contacto'">Solicitar información</button>
+</section>
+
+<section id="servicios" class="section">
+    <h2>Servicios</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Creación rápida</h3>
+            <p>Ten tu página lista en cuestión de horas.</p>
+        </div>
+        <div class="card">
+            <h3>Diseño moderno</h3>
+            <p>Interfaces atractivas que venden por ti.</p>
+        </div>
+        <div class="card">
+            <h3>Optimizado para clientes</h3>
+            <p>Convierte visitas en compradores.</p>
+        </div>
+    </div>
+</section>
+
+<section id="catalogo" class="section">
+    <h2>Catálogo de planes</h2>
+    <div class="catalogo">
+        <div class="producto">
+            <h3>Plan Básico</h3>
+            <p>Página simple para mostrar servicios</p>
+            <strong>$</strong>
+        </div>
+        <div class="producto">
+            <h3>Plan Profesional</h3>
+            <p>Incluye catálogo y contacto</p>
+            <strong>$$</strong>
+        </div>
+        <div class="producto">
+            <h3>Plan Empresarial</h3>
+            <p>Todo incluido + soporte</p>
+            <strong>$$$</strong>
+        </div>
+    </div>
+</section>
+
+<section id="galeria" class="section gallery">
+    <h2>Ejemplos de páginas</h2>
+    <img src="https://via.placeholder.com/300x200">
+    <img src="https://via.placeholder.com/300x200">
+    <img src="https://via.placeholder.com/300x200">
+</section>
+
+<section id="nosotros" class="section">
+    <h2>Nosotros</h2>
+    <p>
+        Somos <strong>Ana Martínez, Andrea y Angello Luque</strong>,
+        estudiantes de ingeniería enfocados en crear soluciones digitales
+        accesibles para empresas que quieren crecer.
+    </p>
+</section>
+
+<section id="contacto" class="section">
+    <h2>Contacto</h2>
+    <p>Correo Ana: ____________________</p>
+    <p>Correo Andrea: _________________</p>
+    <p>Correo Angello: ________________</p>
+
+    <h3>Síguenos</h3>
+    <p>
+        Instagram: ____________ <br>
+        Facebook: ____________ <br>
+        LinkedIn: ____________
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 TriWeb Solutions</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/573000000000">💬</a>
+
+</body>
+</html>
