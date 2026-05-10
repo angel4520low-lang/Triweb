@@ -4,83 +4,121 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TriWeb Solutions</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
 body {
-    margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: #1E3A5F;
+    background: #E9EEF2;
+    color: #16324F;
+    line-height: 1.6;
 }
 
 /* NAVBAR */
+
 header {
-    background: #E5E7EB;
+    background: rgba(22, 50, 79, 0.95);
+    backdrop-filter: blur(10px);
     color: white;
-    padding: 15px;
+    padding: 18px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
 header h1 {
-    margin: 0;
+    font-size: 30px;
+    font-weight: 700;
+    color: #5EEAD4;
+    letter-spacing: 1px;
 }
 
 nav a {
     color: white;
-    margin: 0 10px;
+    margin: 0 14px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #5EEAD4;
 }
 
 /* HERO */
+
 .hero {
     text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(to right, #0a2540, #1c3d5a);
+    padding: 110px 20px;
+    background:
+    linear-gradient(rgba(14, 37, 63, 0.85), rgba(14, 37, 63, 0.9)),
+    url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1400');
+    background-size: cover;
+    background-position: center;
     color: white;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero p {
+    max-width: 900px;
+    margin: auto;
+    font-size: 18px;
+    opacity: 0.95;
 }
 
 .hero button {
-    padding: 12px 20px;
-    margin-top: 20px;
-    background: #00c896;
+    padding: 14px 28px;
+    margin-top: 30px;
+    background: linear-gradient(135deg, #14B8A6, #0EA5E9);
     border: none;
     color: white;
     font-size: 16px;
-    border-radius: 16px;
+    border-radius: 14px;
     cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-/* SECTIONS */
+.hero button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* SECCIONES */
+
 .section {
-    padding: 50px 20px;
+    padding: 80px 20px;
     text-align: center;
 }
 
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+.section h2{
+    font-size: 38px;
+    margin-bottom: 20px;
+    color: #16324F;
 }
 
-.card {
-    background: white;
-    padding: 20px;
-    width: 260px;
-    border-radius: 16px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
+/* CARDS */
 
-/* IMAGES */
-.gallery img {
-    width: 300px;
-    border-radius: 16px;
-}
-
-/* CATALOGO */
+.cards,
 .catalogo {
     display: flex;
     flex-wrap: wrap;
@@ -88,34 +126,123 @@ nav a {
     gap: 30px;
 }
 
+.card,
 .producto {
     background: white;
-    padding: 20px;
-    width: 280px;
-    border-radius: 16px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    padding: 30px;
+    width: 300px;
+    border-radius: 22px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.4s ease;
+}
+
+.card:hover,
+.producto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.12);
+}
+
+.card h3,
+.producto h3{
+    margin-bottom:15px;
+    color:#0F766E;
+}
+
+/* GALERÍA */
+
+.gallery {
+    background: #DDE6ED;
+}
+
+.gallery img {
+    width: 320px;
+    border-radius: 20px;
+    margin: 15px;
+    transition: 0.4s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+/* NOSOTROS Y CONTACTO */
+
+#nosotros p,
+#contacto p{
+    max-width: 850px;
+    margin: auto;
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+/* CONTACTO */
+
+#contacto{
+    background: white;
+}
+
+#contacto h3{
+    margin-top:30px;
+    color:#0F766E;
 }
 
 /* FOOTER */
+
 footer {
-    background: #0a2540;
+    background: #16324F;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
+    font-size: 15px;
 }
 
 /* WHATSAPP */
-.whatsapp y llamadas {
+
+.whatsapp {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
+    bottom: 25px;
+    right: 25px;
+    background: linear-gradient(135deg, #14B8A6, #25D366);
     color: white;
-    padding: 15px;
+    width: 60px;
+    height: 60px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 28px;
     text-decoration: none;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: 0.3s ease;
 }
+
+.whatsapp:hover{
+    transform: scale(1.1);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav{
+        text-align:center;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+}
+
 </style>
 </head>
 
@@ -123,6 +250,7 @@ footer {
 
 <header>
     <h1>TriWeb Solutions</h1>
+
     <nav>
         <a href="#inicio">Inicio</a>
         <a href="#servicios">Servicios</a>
@@ -134,92 +262,158 @@ footer {
 </header>
 
 <section id="inicio" class="hero">
+
     <h1>Crea la página web de tu empresa en minutos</h1>
+
     <p>
         En TriWeb Solutions somos una empresa enfocada en el desarrollo de soluciones digitales que impulsan 
         el crecimiento de las empresas en el entorno online. Nacimos con un objetivo claro: hacer que cualquier negocio, 
         sin importar su tamaño o experiencia tecnológica, pueda tener una presencia digital profesional, efectiva y accesible.
     </p>
-    <button onclick="window.location='#contacto'">Solicitar información</button>
+
+    <button onclick="window.location='#contacto'">
+        Solicitar información
+    </button>
+
 </section>
 
 <section id="servicios" class="section">
+
     <h2>Servicios</h2>
+
     <div class="cards">
+
         <div class="card">
-            <h3>Creación rápida</h3>
+            <h3>⚡ Creación rápida</h3>
             <p>Ten tu página lista en cuestión de horas.</p>
         </div>
+
         <div class="card">
-            <h3>Diseño moderno</h3>
+            <h3>🎨 Diseño moderno</h3>
             <p>Interfaces atractivas que venden por ti.</p>
         </div>
+
         <div class="card">
-            <h3>Optimizado para clientes</h3>
+            <h3>📈 Optimizado para clientes</h3>
             <p>Convierte visitas en compradores.</p>
         </div>
+
     </div>
+
+</section>
+
+<section class="section">
+
+<h2>¿Por qué elegir TriWeb Solutions?</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🚀 Rapidez</h3>
+<p>Implementamos páginas web funcionales en tiempo récord.</p>
+</div>
+
+<div class="card">
+<h3>🎯 Estrategia</h3>
+<p>Diseños enfocados en atraer clientes y generar confianza.</p>
+</div>
+
+<div class="card">
+<h3>🛠 Soporte</h3>
+<p>Acompañamos a nuestros clientes durante todo el proceso.</p>
+</div>
+
+</div>
+
 </section>
 
 <section id="catalogo" class="section">
+
     <h2>Catálogo de planes mensual</h2>
+
     <div class="catalogo">
+
         <div class="producto">
             <h3>Plan Básico</h3>
             <p>Página simple para mostrar servicios</p>
-            <strong>cop $20.000</strong>
+            <strong>COP $20.000</strong>
         </div>
+
         <div class="producto">
             <h3>Plan Profesional</h3>
             <p>Incluye catálogo y contacto</p>
-            <strong>cop$27.000</strong>
+            <strong>COP $27.000</strong>
         </div>
+
         <div class="producto">
             <h3>Plan Empresarial</h3>
-            <p>Todo incluido + soporte+ampliacion+mejoras</p>
-            <strong>cop$35.000</strong>
+            <p>Todo incluido + soporte + ampliación + mejoras</p>
+            <strong>COP $35.000</strong>
         </div>
+
     </div>
+
 </section>
 
 <section id="galeria" class="section gallery">
+
     <h2>Ejemplos de páginas</h2>
+
     <img src="https://www.begoromero.com/wp-content/uploads/blog-tipo-web.jpg">
+
     <img src="https://assets.justinmind.com/wp-content/uploads/2024/10/website-example-justinmind-768x492.png">
+
     <img src="https://static.wixstatic.com/media/110ec7_c4fd5fba711f415fb2c177f38618ded6~mv2.png">
+
 </section>
 
 <section id="nosotros" class="section">
+
     <h2>Nosotros</h2>
+
     <p>
         Somos <strong>Ana Martínez, Angie Galindo y Angello Luque</strong>,
         estudiantes de ingeniería enfocados en crear soluciones digitales
         accesibles para empresas que quieren crecer.
     </p>
+
 </section>
 
 <section id="contacto" class="section">
+
     <h2>Contacto</h2>
-    <p> Directora marketing y diseño
-        ana.martinezric@cun.edu.co</p>
-    <p>Directora Tecnica desarrollo web
-        angie.galindoc@cun.edu.co</p>
-    <p> CEO
-        angello.luque@cun.edu.co</p>
+
+    <p>
+        <strong>Directora marketing y diseño</strong><br>
+        ana.martinezric@cun.edu.co
+    </p>
+
+    <p>
+        <strong>Directora Técnica desarrollo web</strong><br>
+        angie.galindoc@cun.edu.co
+    </p>
+
+    <p>
+        <strong>CEO</strong><br>
+        angello.luque@cun.edu.co
+    </p>
 
     <h3>Síguenos</h3>
+
     <p>
         Instagram: Triwebsolutions-2026 <br>
         Facebook: Triwebsolutions-2026 <br>
         LinkedIn: Triwebsolutions-2026
     </p>
+
 </section>
 
 <footer>
-    <p>© 2026 TriWeb Solutions</p>
+    <p>© 2026 TriWeb Solutions - Todos los derechos reservados</p>
 </footer>
 
 <a class="whatsapp" href="https://wa.me/573008081554">💬</a>
 
 </body>
+</html>
 </html>
